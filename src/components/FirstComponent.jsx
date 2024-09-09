@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 
 function FirstComponent() {
 
@@ -6,7 +5,7 @@ function FirstComponent() {
     const nome = "Samuel";
     const sobrenome = "Rodrigues";
     const matricula = "2314291027";
-    const nomeProfessor = "Dr. Smith";
+    const nomeProfessor = "Felipe Batista da Silva";
     const nomeDisciplina = "Construção de FrontEnd";
 
 
@@ -18,9 +17,6 @@ function FirstComponent() {
             <p><strong>Matrícula : </strong> {matricula}</p>
             <p><strong>Professor : </strong> {nomeProfessor}</p>
             <p><strong>Disciplina : </strong>{nomeDisciplina}</p>
-
-
-            <button onClick={mostrar}>mostrar relatorio</button>
 
         </>
     )
