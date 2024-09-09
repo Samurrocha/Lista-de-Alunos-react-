@@ -1,7 +1,7 @@
 import React from "react"
 
 
-const relatorioALunos = () => {
+const RelatorioALunos = () => {
 
     const alunos = [
 
@@ -37,21 +37,11 @@ const relatorioALunos = () => {
         }
     ]
 
-
+    alunos.sort((a,b)=> a.aluno.localeCompare(b.aluno))
 
     return (
 
         <div>
-
-
-            <div id="container">
-
-                <h1>Mostrar Relatorio de Usuarios</h1>
-
-                <button type="submit" id="submit-button">Relatorio</button>
-
-            </div>
-
             <div id="relatorio">
                 <h1>RELATORIO</h1>
 
@@ -68,21 +58,20 @@ const relatorioALunos = () => {
                     </thead>
 
                     <tbody id="tbody">
-                        {alunos.map(elemento =()=>{
+                        {alunos.map((elemento, index) => (
 
-                            <tr>
+                            <tr key={index}>
                                 <td>{elemento.aluno}</td>
+                                <td>{elemento.matrícula}</td>
+                                <td>{elemento.nota}</td>
                             </tr>
-                        })}
+                        ))}
 
                     </tbody>
-
 
                 </table>
 
             </div>
-
-
 
         </div>
 
@@ -90,6 +79,4 @@ const relatorioALunos = () => {
 
 }
 
-
-
-export default ArrayComponent;
+export default RelatorioALunos
